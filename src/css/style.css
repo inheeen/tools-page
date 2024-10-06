@@ -891,6 +891,12 @@ body {
   background-color: #2E2E2E;
 }
 
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .footer {
   background-color: #F6F6F6;
 }
