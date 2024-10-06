@@ -6,45 +6,73 @@
     <link rel="stylesheet" href="./src/css/bootstrap.min.css">
     <link rel="stylesheet" href="./src/css/style.css">
     <title>PlainSvent-tools</title>
+    <style>
+      .hide {
+          display: none; 
+      }
+  </style>
+  <script src="./src/js/modal.js" defer></script>
+  <script src="./src/js/index.js" defer></script>
 </head>
 <body>
     <!-- первая секция -->
     <section class="main-section bgc">
-        <div class="main-section__nav-container container">
-            <img src="./src/icons/logo.png" alt="" class="main-section__logo">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <div class="nav-item__circle-one circle"></div>
-                        <a class="nav-link active" aria-current="page" href="#"><p class="navbar__text">About</p></a>
+      <div class="main-section__nav-container container">
+        <img src="./src/icons/logo.png" alt="" class="main-section__logo">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="./src/icons/Vector.png" alt="" class="navbar-toggler-icon__img">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li class="dropdown-item">
+                        <div class="dropdown-item__circle-one circle"></div>
+                        <a class="nav-link active" aria-current="page" href="https://inheeen.github.io/about-page/"><p class="navbar__text">About</p></a>
                       </li>
-                      <li class="nav-item">
-                        <div class="nav-item__circle-two circle"></div>
-                        <a class="nav-link" href="#"><p class="navbar__text">Ventures</p></a>
+                      <li class="dropdown-item">
+                        <div class="dropdown-item__circle-two circle"></div>
+                        <a class="nav-link" href="https://inheeen.github.io/ventures-pages/"><p class="navbar__text">Ventures</p></a>
                       </li>
-                      <li class="nav-item">
-                        <div class="nav-item__circle-three circle"></div>
-                        <a class="nav-link" href="#"><p class="navbar__text-active">Tools</p></a>
+                      <li class="dropdown-item">
+                        <div class="dropdown-item__circle-three circle"></div>
+                        <a class="nav-link" href="https://inheeen.github.io/tools-page/"><p class="navbar__text">Tools</p></a>
                       </li>
-                      <li class="nav-item">
-                        <div class="nav-item__circle-four circle"></div>
-                        <a class="nav-link" href="#"><p class="navbar__text">Notepad</p></a>
+                      <li class="dropdown-item">
+                        <div class="dropdown-item__circle-four circle"></div>
+                        <a class="nav-link" href="https://inheeen.github.io/notepad-page/"><p class="navbar__text">Notepad</p></a>
                       </li>
-                    </ul>
-                  </div>
-                </div>
-                <button class="cart-container__btn second-btn">
-                  <a href="#" class="cart-container__link">
-                    <p class="cart-container__text">Connect</p>
-                  </a>
-                </button>
-              </nav>
-        </div>
+                </span>
+              </button>
+              <div class="collapse navbar-collapse" >
+                <ul class="navbar-nav">
+                  <li class="dropdown-item">
+                    <div class="dropdown-item__circle-one circle"></div>
+                    <a class="nav-link active" aria-current="page" href="https://inheeen.github.io/about-page/"><p class="navbar__text">About</p></a>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="dropdown-item__circle-two circle"></div>
+                    <a class="nav-link" href="https://inheeen.github.io/ventures-pages/"><p class="navbar__text">Ventures</p></a>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="dropdown-item__circle-three circle"></div>
+                    <a class="nav-link" href="https://inheeen.github.io/tools-page/"><p class="navbar__text">Tools</p></a>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="dropdown-item__circle-four circle"></div>
+                    <a class="nav-link" href="https://inheeen.github.io/notepad-page/"><p class="navbar__text">Notepad</p></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button class="cart-container__btn second-btn">
+              <a href="#" class="cart-container__link">
+                <p class="cart-container__text">Connect</p>
+              </a>
+            </button>
+          </nav>
+    </div>
         <div class="main-section__content-container container">
             <img src="./src/img/1.png" alt="" class="main-section__img">
             <h1 class="main-section__title">Cool tools</h1>
@@ -54,18 +82,18 @@
     <!-- вторая секция -->
     <section class="second-section bgc">
         <div class="second-section__content-container container">
-        <div class="second-section__btn-box btn-box">
-                <a href="" class="btn-box__link">All</a>
-                <a href="" class="btn-box__link">Free</a>
-                <a href="" class="btn-box__link">Personal</a>
-                <a href="" class="btn-box__link">Productivity</a>
-                <a href="" class="btn-box__link">Design</a>
-                <a href="" class="btn-box__link">Dev</a>
+        <div class="second-section__btn-box btn-box container">
+                <button data-f="all" class="btn-box__link">All</button>
+                <button data-f="free" class="btn-box__link">Free</button>
+                <button data-f="personal" class="btn-box__link">Personal</button>
+                <button data-f="productivity" class="btn-box__link">Productivity</button>
+                <button data-f="design" class="btn-box__link">Design</button>
+                <button data-f="dev" class="btn-box__link">Dev</button>
         </div>
         <!-- гриды -->
         <div class="second-section__grid-container grid-container container">
             <!-- 1 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box productivity all free">
                 <button class="item-box__btn">
                     <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
                 </button>
@@ -88,7 +116,7 @@
                 </div>
             </div>
             <!-- 2 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box personal all free">
                 <button class="item-box__btn">
                     <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
                 </button>
@@ -111,7 +139,7 @@
                 </div>
             </div>
             <!-- 3 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box dev all free">
                 <button class="item-box__btn">
                     <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
                 </button>
@@ -134,7 +162,7 @@
                 </div>
             </div>
             <!-- 4 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box all free productivity">
                 <button class="item-box__btn">
                     <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
                 </button>
@@ -156,7 +184,7 @@
                 </div>
             </div>
             <!-- 5 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box all free personal">
               <button class="item-box__btn">
                   <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
               </button>
@@ -179,7 +207,7 @@
               </div>
             </div>
             <!-- 6 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box all free productivity">
               <button class="item-box__btn">
                   <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
               </button>
@@ -201,7 +229,7 @@
               </div>
             </div>
             <!-- 7 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box all free productivity">
               <button class="item-box__btn">
                   <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
               </button>
@@ -223,7 +251,7 @@
               </div>
             </div>
             <!-- 8 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box all free design">
               <button class="item-box__btn">
                   <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
               </button>
@@ -246,7 +274,7 @@
               </div>
             </div>
             <!-- 9 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box all free dev">
               <button class="item-box__btn">
                   <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
               </button>
@@ -268,7 +296,7 @@
               </div>
             </div>
             <!-- 10 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box all free productivity">
               <button class="item-box__btn">
                   <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
               </button>
@@ -291,7 +319,7 @@
               </div>
             </div>
             <!-- 11 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box all free productivity">
               <button class="item-box__btn">
                   <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
               </button>
@@ -312,7 +340,7 @@
               </div>
             </div>
             <!-- 12 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box all free personal">
               <button class="item-box__btn">
                   <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
               </button>
@@ -334,7 +362,7 @@
               </div>
             </div>
             <!-- 13 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box all free productivity">
               <button class="item-box__btn">
                   <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
               </button>
@@ -356,7 +384,7 @@
               </div>
             </div>
             <!-- 14 карточка -->
-            <div class="grid-container__item-box item-box">
+            <div class="grid-container__item-box item-box all free dev">
               <button class="item-box__btn">
                   <img src="./src/img/div.section.png" alt="" class="item-box__btn-img">
               </button>
@@ -377,18 +405,20 @@
               </div>
             </div>
         </div>
-        <div class="second-section__form-container form-container container">
-          <p class="form-container__title">Got a cool tool you want to share?</p>
-          <div class="form-container__form-box form-box">
-            <form action="send.php" class="form-box__form-group" method="post">
-              <div class="first-form__box box-form">
-                  <input id="first-form" type="email" class="form-box__input" name="fio" placeholder="Email address" required>
+        <div class="second-section__formi-container formi-container container">
+          <p class="formi-container__title">Got a cool tool you want to share?</p>
+          <div class="formi-container__form-box formi-box">
+            <form action="send.php" class="formi-box__formi-group" method="post">
+              <div class="first-formi__box box-form">
+                  <input id="firsti-form" type="email" class="formi-box__input" name="fio" placeholder="Email address" required>
               </div>
-              <div class="second-form__box box-form">
-                  <input id="second-form" type="url" class="form-box__input" name="fio" placeholder="Tool URL" required>
+              <div class="second-formi__box box-formi">
+                  <input id="second-formi" type="url" class="formi-box__input" name="fio" placeholder="Tool URL" required>
               </div>
-              <input type="submit" class="form-box__btn button" value="Send!">
             </form>
+            <button class="second-section__btn button">
+              <img src="./src/img/3.png" alt="" class="formi-box__btn-img">
+            </button>
           </div>
         </div>
     </section>
@@ -442,7 +472,7 @@
           <div class="footer__line container line"></div>
           <div class="footer__second-section">
             <p class="footer__text footer__second-text">Got a great idea but need help building it?</p>
-            <button class="footer__btn second-btn">Get in touch</button>
+            <button class="footer__btn second-btn" id="open-modal-btn">Get in touch</button>
           </div>
           <div class="footer__line container line"></div>
           <div class="footer__third-section">
@@ -472,7 +502,36 @@
           </div>
         </div>
     </footer>
-    <script defer src="./src/js/index.js"></script>
+
+    <!-- Модальное окно -->
+    <div id="my-modal" class="modal">
+      <div class="modal__box">
+        <div class="modal-box__head">
+          <button id="close-my-modal-btn" class="modal-box__btn">
+            <img src="./src/icons/modal-close.png" alt="">
+          </button>
+        </div>
+        <div class="modal-box__body">
+          <p class="modal-box__title">Got an idea?</p>
+          <p class="modal-box__text">We’re looking for people who have an idea of their own or are looking to help us launch great ideas. Whether you want to solve the problem yourself or are just looking for a new solution, we’d love for you to join us.</p>
+          <form action="send.php" class="form-box__first-group" method="post">
+            <div class="first-form__box box-form">
+                <label for="first-form" class="form-box__label">First name*</label>
+                <input id="first-form" type="text" class="form-box__input" name="fio" placeholder="First name" required>
+            </div>
+            <div class="second-form__box box-form">
+                <label for="second-form" class="form-box__label">Last name*</label>
+                <input id="second-form" type="text" class="form-box__input" name="fio" placeholder="Last name" required>
+            </div>
+            <div class="third-form__box box-form">
+                <label for="third-form" class="form-box__label">Email address*</label>
+                <input id="third-form" type="email" class="form-box__input" name="email" placeholder="E-mail" required>
+            </div>
+            <input type="submit" class="form-box__btn" value="Get in touch">
+          </form>
+        </div>
+      </div>
+  </div>
     <script src="./src/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
